@@ -75,4 +75,4 @@ meanstddata <- cbind(select(mergeddata, activity, subjectid), select(mergeddata,
 
 groupdata <- group_by(meanstddata, activity, subject)
 tidydata <- summarise_each(groupdata, funs(mean))
-write.table(tidydata, "tidy.txt") 
+write.table(tidydata, "tidy.txt", row.names=FALSE) 
